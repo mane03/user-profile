@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My profile</title>
+</head>
+<body>
+<!--profile info start-->
+<div class="container-fluid profile">
+    <div class="container">
+        <div class="row">
+            <div class="offset-xl-10 offset-sm-9 offset-9 col-lg-2 col-sm-3 col-3">
+                <div class="profile__team btn">
+                    Team
+                </div>
+                <div class="team__btn btn">
+                    <img class="profile__icon team__icon" src="images/icons/teamwork.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row profile__header">
+            <div class="col-xl-2 col-lg-3 col-md-4">
+                <div class="profile__img">
+                    <div>
+                        <img class="image__above" src="images/imageAbove.png" alt="">
+                    </div>
+                    <div class="edit__profileImg">
+                        <img class="edit__icon" src="images/icons/pen.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-7 col-md-7" id="profile__info">
+                <div class="profile__info">
+                    <h3 class="profile__name">Name Lastname</h3>
+                    <h4 class="profile__email">namelastname@gmail.com</h4>
+                </div>
+                <ul class="profile__desc">
+                    <li class="profile__item"><img src="images/icons/location.svg" class="profile__icon" alt="">Address</li>
+                    <li class="profile__item"><img src="images/icons/work.svg" class="profile__icon" alt="">Profession</li>
+                    <li class="profile__item"><img src="images/icons/gender.svg" class="profile__icon" alt="">Gender</li>
+                    <li class="profile__item"><img src="images/icons/phone.svg" class="profile__icon" alt="">Phone</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row profile__header">
+            <div class="col-xl-7 col-lg-9">
+                <ul class="nav underline__nav">
+                    <li class="nav__item active" id="navLinkDefault">
+                        <a href="#" class="nav__link ">
+                            <img src="images/icons/posts.svg" class="profile__icon" alt="">
+                            Posts
+                        </a>
+                    </li>
+                    <li class="nav__item" id="navLink">
+                        <a href="#" class="nav__link" >
+                            <img src="images/icons/diagram.svg" class="profile__icon" alt="">
+                            Diagrams
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--profile info end-->
+<div class="container">
+    <div class="row profile__buttons profile__header">
+        <div class="col-xl-5">
+            <div class="add__post" id="add-post">
+                <form action="">
+                    <label>
+                    <textarea placeholder="What news do you have ?"
+                              class="add__news"
+                              cols="70"
+                              rows="2"></textarea>
+                    </label>
+                    <input value="Post" type="submit" class="btn post__btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--diagram section-->
+<div class="container">
+    <div class="row" id="diagram">
+        <div class="col-xl-6 col-lg-6 col-md-12">
+            <canvas ></canvas>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12">
+            <canvas  id="profileHistogram"></canvas>
+        </div>
+    </div>
+</div>
+<!--posts section-->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="posts"></div>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
