@@ -66,6 +66,7 @@ canvas {
     position: relative;
 }
 
+
 .edit__profileImg {
     display: none;
 }
@@ -227,6 +228,13 @@ canvas {
     outline: none;
     cursor: pointer;
 }
+
+.conversations.conv-active {
+    display: block;
+    height: auto;
+    opacity: 1;
+}
+
 
 @media (max-width: 767px) {
     .profile__img {
