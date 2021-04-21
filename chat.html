@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="chat">
+<!--    Section for chat users and groups-->
     <div class="left__panel" id="left__panel">
         <form action="#" class="chat__form">
             <label for="search" class="form__label">
@@ -19,6 +20,7 @@
                 <img src="images/icons/search.svg" class="form__icon" alt="icon-search">
             </label>
         </form>
+        <!--    Section for projects-->
         <div class="project">
             <div class="project__desc">
                 <h2 class="project__title">Projects</h2>
@@ -42,6 +44,7 @@
                 </div>
             </div>
         </div>
+    <!--  Conversations start-->
         <div class="conversations conv-active chats">
             <div class="project__desc">
                 <h2 class="project__title">Conversations</h2>
@@ -71,6 +74,8 @@
                 </div>
             </div>
         </div>
+        <!-- Conversations end-->
+        <!-- Group start-->
         <div class="groups chats">
             <div class="project__desc">
                 <h2 class="project__title">Groups</h2>
@@ -96,6 +101,7 @@
                 </div>
             </div>
         </div>
+        <!--  Group end-->
     </div>
     <div class="right__panel">
         <div class="chat__info">
@@ -113,7 +119,7 @@
             </div>
         </div>
         <div class="messages">
-            <ul class="messages__block">
+            <ul class="messages__block" id="messagesBlock">
                 <li class="messages__sent">
                     <div class="avatar__block">
                         <img class="message__img" src="images/user.jpg" alt="avatar">
@@ -167,9 +173,9 @@
             </ul>
         </div>
         <div class="form__block">
-            <form action="#" class="sent__message chat__form">
+            <form action="#" class="sent__message chat__form" id="formSent">
                 <label for="sent" class="form__label ">
-                    <input type="text" placeholder="Write your message" id="sent" class="sent__label form__input">
+                    <input type="text" autocomplete="off" placeholder="Write your message" id="sent" class="sent__label form__input">
                     <button class="form__icon sent__icon">
                         <img src="images/icons/code.svg" alt="">
                     </button>

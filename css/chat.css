@@ -4,9 +4,7 @@
     --block-color: #DCDCDC;
     --logos-color: #C4C4C4;
     --hover-color: #342A54;
-
 }
-
 
 body {
     margin: 0;
@@ -23,12 +21,9 @@ body {
 .left__panel {
     overflow-y: scroll;
     overflow-x: hidden;
-    /*position: absolute;*/
     width: 600px;
     height: 100vh;
     padding: 45px 60px;
-    /*height: 100%;*/
-    /*left: 0;*/
     background-color: #1B162C;
 }
 
@@ -71,7 +66,6 @@ input[type="text"] {
     right: 5%;
 }
 
-
 .project__desc {
     display: flex;
     justify-content: space-between;
@@ -88,6 +82,7 @@ input[type="text"] {
 }
 
 .projects__block {
+    overflow: hidden;
     background: var(--block-color);
     width: 100%;
     padding: 17px 20px;
@@ -100,9 +95,11 @@ input[type="text"] {
 .project__logo {
     background: var(--logos-color);
     border-radius: 50%;
+    min-width: 50px;
     width: 50px;
     height: 50px;
     margin-left: 5px;
+    overflow: hidden;
 }
 
 .project__logo:first-child {
@@ -209,6 +206,7 @@ input[type="text"] {
     outline: none;
     cursor: pointer;
 }
+
 .messages {
     overflow: auto;
     overflow-y: scroll;
@@ -276,7 +274,6 @@ input[type="text"] {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    /*position: absolute;*/
     bottom: 0;
     width: 100%;
 }
@@ -295,14 +292,6 @@ input[type="text"] {
 .reverse .message__time {
     display: flex;
     justify-content: flex-end;
-}
-
-.avatar__block {
-
-}
-
-.message__desc {
-
 }
 
 .message__time{
@@ -328,4 +317,25 @@ input[type="text"] {
 .reverse .message {
     background: #201E52;
     color: var(--text-color);
+}
+
+@media (max-width: 1070px) {
+    .left__panel {
+        padding: 30px 40px;
+        width: 500px;
+    }
+
+    .project__title {
+        font-size: 16px;
+    }
+
+    .project__logo {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .user__name {
+        margin: 12px ;
+    }
 }

@@ -43,3 +43,28 @@ for (let i = 0; i < conversations.length; i++) {
   })
 }
 
+
+const formSent = document.getElementById("formSent")
+const sentInput = document.getElementById("sent")
+const result = document.getElementById("messagesBlock")
+
+formSent.addEventListener("submit", (e) => {
+  e.preventDefault()
+  let dateWithoutSecond = new Date();
+  let localTime = dateWithoutSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+
+
+  result.innerHTML += `
+  <li class="messages__sent reverse">
+      <div class="avatar__block">
+          <img class="message__img" src="images/user.jpg" alt="avatar">
+      </div>
+      <div class="message__desc">
+          <p class="message">${sentInput.value}</p>
+          <span class="message__time">${localTime}</span>
+      </div>
+  </li>
+  `
+  sentInput.value = ""
+})
+
