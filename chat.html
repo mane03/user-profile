@@ -13,7 +13,7 @@
 <body>
 <div class="chat">
 <!--    Section for chat users and groups-->
-    <div class="left__panel" id="left__panel">
+    <div class="left__panel sidebar" id="left__panel">
         <form action="#" class="chat__form">
             <label for="search" class="form__label">
                 <input type="text" id="search" placeholder="Search input" class="form__input">
@@ -46,7 +46,7 @@
         </div>
     <!--  Conversations start-->
         <div class="conversations conv-active chats">
-            <div class="project__desc">
+            <div class="project__desc project__close">
                 <h2 class="project__title">Conversations</h2>
                 <svg class="arrow" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
@@ -77,7 +77,7 @@
         <!-- Conversations end-->
         <!-- Group start-->
         <div class="groups chats">
-            <div class="project__desc">
+            <div class="project__desc project__close">
                 <h2 class="project__title">Groups</h2>
                 <svg class="arrow" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
@@ -103,8 +103,9 @@
         </div>
         <!--  Group end-->
     </div>
-    <div class="right__panel">
+    <div class="right__panel" id="main">
         <div class="chat__info">
+            <span onclick="openNav()" id="burger" class="burger">&#9776</span>
                 <h3 class="chat__name">Group name</h3>
                 <div class="group__members">
                     <div class="group__item"></div>
@@ -118,14 +119,14 @@
                 <img class="chat__icon" src="images/icons/info.svg" alt="info">
             </div>
         </div>
-        <div class="messages">
+        <div class="messages" >
             <ul class="messages__block" id="messagesBlock">
                 <li class="messages__sent">
                     <div class="avatar__block">
                         <img class="message__img" src="images/user.jpg" alt="avatar">
                     </div>
                     <div class="message__desc">
-                        <p class="message">Lorem ipsum cere laboriosam quo veritatis? Cumque, earum, eligendi error facere , consecrated</p>
+                        <p class="message" >Lorem ipsum cere laboriosam quo veritatis? Cumque, earum, eligendi error facere , consecrated</p>
                         <span class="message__time">12:25</span>
                     </div>
                 </li>
@@ -176,15 +177,17 @@
             <form action="#" class="sent__message chat__form" id="formSent">
                 <label for="sent" class="form__label ">
                     <input type="text" autocomplete="off" placeholder="Write your message" id="sent" class="sent__label form__input">
-                    <button class="form__icon sent__icon">
-                        <img class="chat__icon" src="images/icons/code.svg" alt="">
-                    </button>
-                    <button class="form__icon sent__icon">
-                        <img class="chat__icon" src="images/icons/smile.svg" alt="">
-                    </button>
-                    <button class="form__icon sent__icon">
-                        <img class="chat__icon" src="images/icons/paper-clip.svg" alt="">
-                    </button>
+                    <div class="sent__icons">
+                        <button class="sent__icon">
+                            <img class="chat__icon" src="images/icons/code.svg" alt="">
+                        </button>
+                        <button class=" sent__icon">
+                            <img class="chat__icon" src="images/icons/smile.svg" alt="">
+                        </button>
+                        <button class=" sent__icon">
+                            <img class="chat__icon" src="images/icons/paper-clip.svg" alt="">
+                        </button>
+                    </div>
                 </label>
                 <button type="submit" class="sent__btn">
                     <img class="sent__icon" src="images/icons/sent.svg" alt="sentIcon">

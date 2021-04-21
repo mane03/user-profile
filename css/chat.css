@@ -234,14 +234,6 @@ input[type="text"] {
     right: 2%;
 }
 
-.sent__icon:nth-child(3) {
-    margin-right: 70px;
-}
-
-.sent__icon:nth-child(2) {
-    margin: 0 35px;
-}
-
 .form__block {
     position: absolute;
     width: 100%;
@@ -328,7 +320,11 @@ input[type="text"] {
 
 .reverse .message {
     background: #201E52;
+}
 
+.sent__icons {
+    position: absolute;
+    right: 5%;
 }
 
 @media (max-width: 1070px) {
@@ -485,5 +481,36 @@ input[type="text"] {
         width: 35px;
         height: 35px;
         min-width: 35px;
+    }
+
+
+    .user__name {
+        font-size: 12px;
+    }
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .sidebar {
+        padding: 0;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .right__panel {
+        height: 100vh;
     }
 }

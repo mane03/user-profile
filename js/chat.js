@@ -23,7 +23,7 @@
 
 
 
-const conversations = document.querySelectorAll(".project__desc");
+const conversations = document.querySelectorAll(".project__close");
 
 for (let i = 0; i < conversations.length; i++) {
   let totalHeight = 0
@@ -68,3 +68,19 @@ formSent.addEventListener("submit", (e) => {
   sentInput.value = ""
 })
 
+const sidebar = document.getElementsByClassName("sidebar")[0]
+const main = document.getElementById("main")
+const burger = document.getElementById("burger")
+
+function openNav() {
+  sidebar.style.width = "250px";
+  sidebar.style.padding = "20px 15px"
+}
+
+window.onclick = function (e) {
+  if(e.target === main) {
+    sidebar.style.width = "0";
+    sidebar.style.padding = "0"
+  }
+  // console.log(e.target)
+}
