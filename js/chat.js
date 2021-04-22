@@ -1,30 +1,12 @@
-// const borderSize = 3;
-// const panel = document.getElementById("left__panel");
-//
-// let panelWidth;
-// function resize(e) {
-//     const dx = panelWidth - e.x;
-//     panelWidth = e.x;
-//     panel.style.width = (parseInt(getComputedStyle(panel, '').width) - dx) + "px";
-// }
-//
-//
-// panel.addEventListener("mousedown", (e) => {
-//     if (e.offsetX > borderSize) {
-//         panelWidth = e.x;
-//         document.addEventListener("mousemove", resize);
-//     }
-// });
-//
-//
-// document.addEventListener("mouseup", () => {
-//     document.removeEventListener("mousemove", resize);
-// });
-
-
-
 const conversations = document.querySelectorAll(".project__close");
+const formSent = document.getElementById("formSent")
+const sentInput = document.getElementById("sent")
+const result = document.getElementById("messagesBlock")
+const sidebar = document.getElementsByClassName("sidebar")[0]
+const main = document.getElementById("main")
 
+
+//function for open and close conversation and group sections
 for (let i = 0; i < conversations.length; i++) {
   let totalHeight = 0
   conversations[i].addEventListener("click", function () {
@@ -43,11 +25,7 @@ for (let i = 0; i < conversations.length; i++) {
   })
 }
 
-
-const formSent = document.getElementById("formSent")
-const sentInput = document.getElementById("sent")
-const result = document.getElementById("messagesBlock")
-
+//function for drawing messages
 formSent.addEventListener("submit", (e) => {
   e.preventDefault()
   let dateWithoutSecond = new Date();
@@ -55,6 +33,7 @@ formSent.addEventListener("submit", (e) => {
 
 
   result.innerHTML += `
+<!--message structure-->
   <li class="messages__sent reverse">
       <div class="avatar__block">
           <img class="message__img" src="images/user.jpg" alt="avatar">
@@ -68,11 +47,8 @@ formSent.addEventListener("submit", (e) => {
   sentInput.value = ""
 })
 
-const sidebar = document.getElementsByClassName("sidebar")[0]
-const main = document.getElementById("main")
-const burger = document.getElementById("burger")
-
-function openNav() {
+//open and close sidebar
+function openSidebar() {
   sidebar.style.width = "250px";
   sidebar.style.padding = "20px 15px"
 }
@@ -82,5 +58,4 @@ window.onclick = function (e) {
     sidebar.style.width = "0";
     sidebar.style.padding = "0"
   }
-  // console.log(e.target)
 }

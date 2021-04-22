@@ -329,6 +329,7 @@ input[type="text"] {
 }
 
 .sent__icons {
+    display: flex;
     position: absolute;
     right: 5%;
 }
@@ -430,10 +431,6 @@ input[type="text"] {
         margin-top: 20px;
     }
 
-    .arrow {
-        /*width: 18px;*/
-        /*height: 18px;*/
-    }
 }
 
 @media (max-width: 700px) {
@@ -489,13 +486,17 @@ input[type="text"] {
         min-width: 35px;
     }
 
-
     .user__name {
         font-size: 12px;
     }
+
+    .group__item {
+        width: 25px;
+        height: 25px;
+    }
 }
 
-.burger {
+.sidebar__icon {
     display: none;
 }
 
@@ -512,7 +513,7 @@ input[type="text"] {
         transition: 0.5s;
     }
 
-    .burger {
+    .sidebar__icon {
         display: flex;
     }
 
