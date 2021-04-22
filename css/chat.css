@@ -296,6 +296,12 @@ input[type="text"] {
     justify-content: flex-end;
 }
 
+.more__icon {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .message__time{
     color: var(--text-color);
     font-size: 12px;
@@ -512,5 +518,47 @@ input[type="text"] {
 
     .right__panel {
         height: 100vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .sent__label {
+        padding: 15px;
+    }
+
+    .group__item {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message {
+        padding: 10px 20px;
+    }
+
+    .messages {
+        height: 80vh;
+    }
+
+    .more__icon {
+        width: 15px;
+        height: 15px;
+        padding: 0;
+    }
+
+    .sent__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .chat__name {
+        font-size: 12px;
+    }
+
+    .chat__info {
+        padding: 10px 10px;
+    }
+
+    .icon {
+        padding: 6px;
     }
 }
